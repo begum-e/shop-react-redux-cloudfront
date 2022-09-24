@@ -1,4 +1,14 @@
-# React-shop-cloudfront
+##### React-shop-cloudfront
+
+TASK 2:
+
+- Cloudfront URL: [https://d2s1y4l7rjgrpm.cloudfront.net/index.html](https://d2s1y4l7rjgrpm.cloudfront.net/index.html)
+- S3 URL: [http://my-store-app-bucket.s3-website-eu-west-1.amazonaws.com/](http://my-store-app-bucket.s3-website-eu-west-1.amazonaws.com/)
+
+
+#####
+
+
 
 This is frontend starter project for nodejs-aws mentoring program. It uses the following technologies:
 

@@ -1,3 +1,5 @@
+
+app: my-store-app
 service: my-store-app
 
 frameworkVersion: "3"
@@ -6,8 +8,8 @@ provider:
   name: aws
   runtime: nodejs14.x
   region: eu-west-1
-  # setup profile for AWS CLI.
-  # profile: node-aws
+  # setup profile for my AWS CLI.
+  profile: serverless-admin
 
 plugins:
   - serverless-finch
@@ -18,8 +20,9 @@ plugins:
   - serverless-s3-cleaner
 
 custom:
+  ## Serverless-finch configuration
   client:
-    bucketName: my-store-app
+    bucketName: my-store-app-bucket
     distributionFolder: dist
   s3BucketName: ${self:custom.client.bucketName}
 
@@ -28,6 +31,35 @@ custom:
   serverless-s3-cleaner:
     buckets:
       - ${self:custom.client.bucketName}
+
+  # you can add statements to the Lambda function's IAM Role here
+  #  iamRoleStatements:
+  #    - Effect: "Allow"
+  #      Action:
+  #        - "s3:ListBucket"
+  #      Resource: { "Fn::Join" : ["", ["arn:aws:s3:::", { "Ref" : "ServerlessDeploymentBucket" } ] ]  }
+  #    - Effect: "Allow"
+  #      Action:
+  #        - "s3:PutObject"
+  #      Resource:
+  #        Fn::Join:
+  #          - ""
+  #          - - "arn:aws:s3:::"
+  #            - "Ref" : "ServerlessDeploymentBucket"
+  #            - "/*"
+
+  # you can define service wide environment variables here
+  #  environment:
+  #    variable1: value1
+
+  # you can add packaging information here
+  #package:
+  #  include:
+  #    - include-me.js
+  #    - include-me-dir/**
+  #  exclude:
+  #    - exclude-me.js
+  #    - exclude-me-dir/**
 
 resources:
   Resources:
@@ -76,7 +108,7 @@ resources:
           Origins:
             - DomainName: !GetAtt WebAppS3Bucket.RegionalDomainName
               ## An identifier for the origin which must be unique within the distribution
-              Id: myS3Origin
+              Id: E3M8MLRK9IBDNP
               ## In case you don't want to restrict the bucket access use CustomOriginConfig and remove S3OriginConfig
               S3OriginConfig:
                 OriginAccessIdentity: !Sub origin-access-identity/cloudfront/${OriginAccessIdentity}
@@ -111,7 +143,7 @@ resources:
               Cookies:
                 Forward: none
             ## The origin id defined above
-            TargetOriginId: myS3Origin
+            TargetOriginId: E3M8MLRK9IBDNP
             ## The protocol that users can use to access the files in the origin. To allow HTTP use `allow-all`
             ViewerProtocolPolicy: redirect-to-https
             Compress: true
