@@ -1,6 +1,6 @@
 
-app: my-store-app
-service: my-store-app
+app: my-demo-store-app
+service: my-demo-store-app
 
 frameworkVersion: "3"
 
@@ -9,7 +9,7 @@ provider:
   runtime: nodejs14.x
   region: eu-west-1
   # setup profile for my AWS CLI.
-  profile: serverless-admin
+  # profile: user-bgm
 
 plugins:
   - serverless-finch
@@ -22,7 +22,7 @@ plugins:
 custom:
   ## Serverless-finch configuration
   client:
-    bucketName: my-store-app-bucket
+    bucketName: my-demo-store-bucket
     distributionFolder: dist
   s3BucketName: ${self:custom.client.bucketName}
 
@@ -108,7 +108,7 @@ resources:
           Origins:
             - DomainName: !GetAtt WebAppS3Bucket.RegionalDomainName
               ## An identifier for the origin which must be unique within the distribution
-              Id: E3M8MLRK9IBDNP
+              Id: myS3OriginId
               ## In case you don't want to restrict the bucket access use CustomOriginConfig and remove S3OriginConfig
               S3OriginConfig:
                 OriginAccessIdentity: !Sub origin-access-identity/cloudfront/${OriginAccessIdentity}
@@ -143,7 +143,7 @@ resources:
               Cookies:
                 Forward: none
             ## The origin id defined above
-            TargetOriginId: E3M8MLRK9IBDNP
+            TargetOriginId: myS3OriginId
             ## The protocol that users can use to access the files in the origin. To allow HTTP use `allow-all`
             ViewerProtocolPolicy: redirect-to-https
             Compress: true
