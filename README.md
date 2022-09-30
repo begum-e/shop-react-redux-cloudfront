@@ -3,7 +3,6 @@
 TASK 2:
 
 - Cloudfront URL: [https://d2lv8eadmzsxnd.cloudfront.net](https://d2lv8eadmzsxnd.cloudfront.net)
-- S3 URL: [http://my-demo-store-bucket.s3-website-eu-west-1.amazonaws.com](http://my-demo-store-bucket.s3-website-eu-west-1.amazonaws.com)
 
 
 TASK 3:
