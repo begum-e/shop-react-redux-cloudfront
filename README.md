@@ -2,7 +2,7 @@
 
 TASK 2:
 
-- Cloudfront URL: [https://d2s1y4l7rjgrpm.cloudfront.net/index.html](https://d2s1y4l7rjgrpm.cloudfront.net/index.html)
+- Cloudfront URL: [https://d2lv8eadmzsxnd.cloudfront.net](https://d2lv8eadmzsxnd.cloudfront.net)
 
 
 
