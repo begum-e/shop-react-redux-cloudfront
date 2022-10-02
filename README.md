@@ -4,13 +4,18 @@ TASK 2:
 
 - Cloudfront URL: [https://d2lv8eadmzsxnd.cloudfront.net](https://d2lv8eadmzsxnd.cloudfront.net)
 
+TASK 3:
+
+- Endpoints: https://zuv7vxdcv0.execute-api.eu-west-1.amazonaws.com/dev
+- Endpoints: https://zuv7vxdcv0.execute-api.eu-west-1.amazonaws.com/dev/products
+- Endpoints: https://zuv7vxdcv0.execute-api.eu-west-1.amazonaws.com/dev/products/{productId}
 
 
 #####
+#####
 
 
-
-This is frontend starter project for nodejs-aws mentoring program. It uses the following technologies:
+This is frontend project for nodejs-aws mentoring program. It uses the following technologies:
 
 - [Vite](https://vitejs.dev/) as a project bundler
 - [React](https://beta.reactjs.org/) as a frontend framework
