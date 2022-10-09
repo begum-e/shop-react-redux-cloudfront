@@ -1,4 +1,3 @@
-
 app: my-demo-store-app
 service: my-demo-store-app
 
@@ -53,12 +52,12 @@ custom:
   #    variable1: value1
 
   # you can add packaging information here
-  #package:
-  #  include:
-  #    - include-me.js
-  #    - include-me-dir/**
-  #  exclude:
-  #    - exclude-me.js
+  package:
+    #  include:
+    #    - include-me.js
+    #    - include-me-dir/**
+    exclude:
+      - mockServiceWorker.js
   #    - exclude-me-dir/**
 
 resources:
