@@ -2,17 +2,30 @@
 
 TASK 2: Serve SPA in AWS S3 and Cloudfront Services
 
-- Cloudfront URL: [https://d2lv8eadmzsxnd.cloudfront.net](https://d2lv8eadmzsxnd.cloudfront.net)
+> - Cloudfront URL: [https://d2lv8eadmzsxnd.cloudfront.net](https://d2lv8eadmzsxnd.cloudfront.net)
+
+#####
 
 TASK 3: First API with AWS API Gateway and AWS Lambda
 
-- Endpoints: https://zuv7vxdcv0.execute-api.eu-west-1.amazonaws.com/dev
-- Endpoints: https://zuv7vxdcv0.execute-api.eu-west-1.amazonaws.com/dev/products
-- Endpoints: https://zuv7vxdcv0.execute-api.eu-west-1.amazonaws.com/dev/products/{productId}
+> - Endpoints: https://zuv7vxdcv0.execute-api.eu-west-1.amazonaws.com/dev
+> - Endpoints: https://zuv7vxdcv0.execute-api.eu-west-1.amazonaws.com/dev/products
+> - Endpoints: https://zuv7vxdcv0.execute-api.eu-west-1.amazonaws.com/dev/products/{productId}
+
+#####
 
 TASK 4: Integration with NoSQL Database
 
 > - `createProduct` lambda: `POST` https://zuv7vxdcv0.execute-api.eu-west-1.amazonaws.com/dev/products
+
+#####
+
+TASK 5: Integration with (Import Service) S3
+
+> - Frontend application is integrated with importProductsFile lambda
+> - Endpoint: https://x8l1c4xmg2.execute-api.eu-west-1.amazonaws.com/dev
+
+#####
 
 #####
 
