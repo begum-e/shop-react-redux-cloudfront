@@ -4,8 +4,7 @@ export const ProductSchema = Yup.object({
   id: Yup.string(),
   title: Yup.string().required().default(""),
   description: Yup.string().default(""),
-  price: Yup.number().positive().required().defined().default(0),
-  count: Yup.number().default(0)
+  price: Yup.number().positive().required().defined().default(0)
 });
 
 export const AvailableProductSchema = ProductSchema.shape({
