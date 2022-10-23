@@ -27,7 +27,14 @@ TASK 5: Integration with (Import Service) S3
 
 #####
 
+TASK 6: Async microservices communication - Backend Service (check backend repo)
+
 #####
+
+TASK 7: Authorization
+
+> Frontend Client application is integrated with Authorization Service
+> Import endpoint authorized
 
 #####
 
