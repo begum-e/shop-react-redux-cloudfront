@@ -10,10 +10,18 @@ TASK 3:
 - Endpoints: https://zuv7vxdcv0.execute-api.eu-west-1.amazonaws.com/dev/products
 - Endpoints: https://zuv7vxdcv0.execute-api.eu-west-1.amazonaws.com/dev/products/{productId}
 
+TASK 8 :
+Cart api : https://t90mu4k2ze.execute-api.eu-west-1.amazonaws.com/dev/api/profile/cart
+
+TASK 9:
+Cart api : http://begum-e-cart-api-develop.eba-yspbmped.eu-west-1.elasticbeanstalk.com
+
+TASK 10:
+BFF Api : http://begum-e-bff-api-develop.eba-9tc6frp6.eu-west-1.elasticbeanstalk.com
 
 #####
-#####
 
+#####
 
 This is frontend project for nodejs-aws mentoring program. It uses the following technologies:
 
